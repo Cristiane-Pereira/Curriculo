@@ -1,0 +1,406 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hslvar((--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+
+    /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .left_side {
+  position: relative;
+  background: var(--body-color);
+  padding: 40px;
+}
+.hr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-bottom: 1px solid var(--title-color);
+  margin-bottom: 20px;
+}
+.hr_skill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-bottom: 1px solid var(--title-color);
+}
+
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileText .imgBox {
+  position: relative;
+  border: 1px solid #17202a;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileText .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileText h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.profileText h2 span {
+  font-size: 0.72rem;
+  font-weight: 200;
+}
+
+.container .right_side {
+  position: relative;
+  background: #fff;
+  padding: 40px !important;
+}
+
+.containerInfo {
+  padding-top: 40px;
+}
+
+.title {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.containerInfo ul {
+  position: relative;
+}
+
+.containerInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.containerInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: var(--first-color);
+}
+
+.containerInfo ul li span {
+  color: #fff;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+.containerInfo .education li {
+  margin-bottom: 15px;
+}
+
+.education h5 {
+  color: var(--first-color);
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.education h4 {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.education h6 {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.containerInfo.linguage .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #081921;
+  display: block;
+  margin-top: 6px;
+}
+
+.containerInfo.linguage .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--first-color);
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about:last-child {
+  margin-bottom: 0;
+}
+
+.title2 {
+  font-size: 18px;
+  color: #17202a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #333;
+}
+
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.about .box .year_company {
+  min-width: 150px;
+}
+
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: var(--first-color);
+  font-size: 16px;
+}
+
+.skills_container {
+  row-gap: 0;
+}
+.skills_header {
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+.skills_icon,
+.skills_arrow {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+.skills_icon {
+  margin-right: var(--mb-0-75);
+}
+.skills_title {
+  font-size: var(--h3-font-size);
+}
+.skills_subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 20px !important;
+}
+.skills_arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+.skills_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+  align-items: end;
+}
+.skills_name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  display: flex;
+  align-items: end;
+  margin-bottom: var(--mb-0-5);
+}
+.skills_bar,
+.skills_percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+.skills_bar {
+  background-color: var(--first-color-lighter);
+}
+.skills_percentage {
+  display: block;
+  background-color: var(--first-color);
+}
+.skills_html {
+  width: 98%;
+}
+.skills_css {
+  width: 85%;
+}
+.skills_javascript {
+  width: 60%;
+}
+.skills_reactjs {
+  width: 70%;
+}
+.skills_react-native {
+  width: 70%;
+}
+.skills_vercionamento {
+  width: 80%;
+}
+.skills_node {
+  width: 70%;
+}
+.skills_vercionamento {
+  width: 80%;
+}
+.skills_python {
+  width: 40%;
+}
+.skills_photoshop {
+  width: 60%;
+}
+.skills_figma {
+  width: 50%;
+}
+.skills_close .skills_list {
+  height: 0;
+  overflow: hidden;
+}
+.skills_open .skills_list {
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+}
+.skills_open .skills_arrow {
+  transform: rotate(-180deg);
+}
+
+.interest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.interest ul li {
+  list-style: none;
+  color: #333;
+  font-weight: 500;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.interest ul li .fa-solid {
+  color: var(--first-color) !important;
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .interest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about .box {
+    flex-direction: column;
+  }
+  .about .box .year_company {
+    margin-bottom: 5px;
+  }
+  .interest ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills .box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
