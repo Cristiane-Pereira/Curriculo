@@ -19,7 +19,7 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 
-    /*========== Font and typography ==========*/
+  /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
@@ -159,6 +159,10 @@ body {
   letter-spacing: 1px;
 }
 
+.paragrafo-experience {
+  margin-bottom: 0.8rem;
+}
+
 .containerInfo ul {
   position: relative;
 }
@@ -250,6 +254,8 @@ p {
 
 .about .box .year_company {
   min-width: 150px;
+  font-size: 13px;
+  margin-top: 5px !important;
 }
 
 .about .box .year_company h5 {
@@ -321,25 +327,22 @@ p {
   width: 98%;
 }
 .skills_css {
-  width: 85%;
+  width: 98%;
 }
 .skills_javascript {
   width: 60%;
 }
 .skills_reactjs {
-  width: 70%;
+  width: 80%;
 }
 .skills_react-native {
-  width: 70%;
+  width: 60%;
 }
 .skills_vercionamento {
-  width: 80%;
+  width: 95%;
 }
 .skills_node {
   width: 70%;
-}
-.skills_vercionamento {
-  width: 80%;
 }
 .skills_python {
   width: 40%;
@@ -378,6 +381,13 @@ p {
 .interest ul li .fa-solid {
   color: var(--first-color) !important;
   font-size: 18px;
+}
+
+.paragrafo-experience .icon-circle {
+  color: var(--first-color) !important;
+  font-size: 6px;
+  margin-left: 5px;
+  align-items: start;
 }
 
 @media (max-width: 1000px) {
